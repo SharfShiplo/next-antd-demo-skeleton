@@ -87,6 +87,7 @@ body {
 
 body {
   color: rbg(--foreground-rgb);
+  font-family: "Tajawal", sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
