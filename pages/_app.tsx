@@ -3,6 +3,7 @@ import "@fontsource/tajawal";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { NextPageWithLayout } from "../src/types";
+import DefaultSeo from "../src/components/seo/default-seo";
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
@@ -19,7 +20,7 @@ function CustomApp({
     <>
         {/* <ModalProvider> */}
           <>
-            {/* <DefaultSeo /> */}
+            <DefaultSeo />
             {authenticationRequired ? (
               <></>
               // <PrivateRoute>
