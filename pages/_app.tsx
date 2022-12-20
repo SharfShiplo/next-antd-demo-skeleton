@@ -2,7 +2,6 @@ import "antd/dist/reset.css";
 import "@fontsource/tajawal";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { SWRConfig } from "swr";
 import { NextPageWithLayout } from "../src/types";
 
 type AppPropsWithLayout = AppProps & {
@@ -17,13 +16,7 @@ function CustomApp({
   const authenticationRequired = Component.authenticationRequired ?? false;
 
   return (
-    <SWRConfig
-      value={{
-        refreshInterval: 3000,
-        fetcher: (resource, init) =>
-          fetch(resource, init).then((res) => res.json()),
-      }}
-    >
+    <>
         {/* <ModalProvider> */}
           <>
             {/* <DefaultSeo /> */}
@@ -41,7 +34,7 @@ function CustomApp({
             {/* <SocialLogin /> */}
           </>
         {/* </ModalProvider> */}
-      </SWRConfig>
+      </>
   );
 }
 export default CustomApp;
